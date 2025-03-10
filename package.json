@@ -11,8 +11,6 @@
   },
   "main": "dist/main.js",
   "scripts": {
-    "build:clean": "rimraf dist; exit 0",
-    "prebuild": "yarn build:clean",
     "build": "nest build --path tsconfig.build.json",
     "copy-package": "cp package.json dist/package.json",
     "format": "prettier --write \"src/**/*.ts\"",
