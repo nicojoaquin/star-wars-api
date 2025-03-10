@@ -6,7 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "engines": {
-    "node": "20.11.1",
+    "node": "20.9.0",
     "npm": ">=9.x"
   },
   "main": "dist/main.js",
