@@ -50,7 +50,11 @@ export class AuthService {
   async signUp(dto: SignUpDto): Promise<UserWithTokenResponse> {
     const password = await Utils.hashString(dto.password);
 
-    const user = await this.userService.create({ ...dto, password });
+    const user = await this.userService.create({
+      name: dto.name,
+      username: dto.username.trim().toLowerCase(),
+      password
+    });
     const sanitizedUser = this.userService.sanitizeUser(user);
     const token = await this.createToken(user);
 
