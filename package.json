@@ -11,7 +11,7 @@
   },
   "main": "dist/main.js",
   "scripts": {
-    "build": "nest build --path tsconfig.build.json",
+    "build": "yarn nest build --path tsconfig.build.json",
     "copy-package": "cp package.json dist/package.json",
     "format": "prettier --write \"src/**/*.ts\"",
     "start": "node dist/main.js",
