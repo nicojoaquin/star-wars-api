@@ -7,8 +7,7 @@ import {
 import { Reflector } from '@nestjs/core';
 import { UserRole } from '@prisma/client';
 
-import { RequestWithUser } from '@/contexts/lib/types/config';
-
+import { RequestWithUser } from '../../lib/types/config';
 import { ROLES_KEY } from '../decorators/roles.decorator';
 
 @Injectable()

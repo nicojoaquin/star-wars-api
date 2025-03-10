@@ -1,3 +1,6 @@
 import { User } from '@prisma/client';
+import { Request } from 'express';
 
-export type RequestWithUser = Express.Request & { user: User };
+export interface RequestWithUser extends Request {
+  user: User;
+}
