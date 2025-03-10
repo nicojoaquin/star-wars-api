@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  Regular
+  Admin
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  name      String
+  username  String  @unique
+  password  String
+  role      UserRole    @default(Regular)
+}
+
+model Movie {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  title        String
+  episodeId    Int    @unique
+  director     String
+  producer     String
+  releaseDate  DateTime
+  openingCrawl String
+}

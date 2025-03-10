@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "CommonJS",
+    "declaration": true,
+    "removeComments": true,
+    "target": "esnext",
+    "esModuleInterop": true,
+    "strict": false,
+    "outDir": "dist",
+    "sourceMap": true,
+    "inlineSources": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@/src/*": ["src/*"],
+      "@/app/*": ["src/app/*"],
+      "@/contexts/*": ["src/contexts/*"],
+      "@/shared/*": ["src/shared/*"],
+      "@/tests/*": ["tests/*"]
+    },
+  },
+  "include": ["src/**/*.ts", "prisma/seed.ts", "src/app/movies/test/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
